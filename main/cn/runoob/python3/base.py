@@ -65,4 +65,22 @@ def hello():
 
 
 hello()
-# TODO: python3函数
+
+# 必需参数
+# 关键字参数
+# 默认参数
+# 不定长参数
+
+
+# L （Local） 局部作用域
+# E （Enclosing） 闭包函数外的函数中
+# G （Global） 全局作用域
+# B （Built - in） 内置作用域（内置函数所在模块的范围）
+
+import sys
+
+print('命令行参数如下:')
+for i in sys.argv:
+    print(i)
+
+print('\n\nPython 路径为：', sys.path, '\n')
