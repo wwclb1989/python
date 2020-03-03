@@ -1,3 +1,4 @@
+# 第4章 字符串
 # 跟普通的注释相比，使用三引号标注的注释会作为函数的一个默认属性，可以通过“函数名._doc_”进行访问
 def len(*args, **kwargs):
     """Return the number of items in a container."""
