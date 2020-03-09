@@ -143,5 +143,47 @@ print(result.send('haha'))
 # 序列操作相关函数
 # 1. all(iterable)用于判断可迭代对象中的元素都返回True
 # 2. any(iterable)如果有一个元素是True，结果就是True
-# TODO: 类、对象、属性相关函数
 
+
+# 类、对象、属性相关函数
+# 1. hasattr(obj, name)用来检测对象中是否含有名为name的属性
+# 2. getattr(obj, name)用来从对象中获取名称为name的属性，作用等效于obj.name
+# 3. setattr(obj, name, value)用于设置对象的属性值
+# 4. delattr(obj, name)用于删除对象中的name属性
+# 5. isinstance(obj, cls)用于判断对象是否是类的实例
+
+
+# 编译，执行相关函数
+# 1. repr(obj)功能与str()类似，
+# 不同的是，函数str()用于将对象转为可以阅读的字符串格式，而repr用于将对象转为供解释器读取的形式
+# 2. compile(source, filename, mode, flags = 0, dont_inherit = False, optimize = -1)
+# mode：指定编译代码的种类，可以指定为“exec”，“eval”，“single”。
+# 当source中包含流程语句时，model应该指定为“exec”
+# 当source中包含了一个简单的求值表达式，model应该指定为“eval”
+# 当source中包含了交互式命令语句，model应该指定为“single”
+
+# exec
+words = 'for i in range(5) : print(i)'
+result = compile(words, '', 'exec')
+exec(result)
+
+# eval
+words = '6*6'
+result = compile(words, '', 'eval')
+print(eval(result))
+
+# single
+words = 'input("请输入您的名字：")'
+result = compile(words, '', 'single')   # 返回None, 无法获取到输入的值
+exec(result)
+
+# 3. eval(expression, globals = None, locals = None)用来动态执行一个表达式的字符串，或者compile函数编译出来的代码对象
+# 4. exec(obj[, globals[, locals]])与eval类似，主要用于执行语句块
+
+# 其他函数
+# 1. globals()返回当前作用域内全局变量的字典
+# 2. locals()其功能与globals()类似，locals()函数用于返回当前作用域内的局部变量和值组成的字典
+# 3. ascii(obj)打印字符串表示，非ASCII打印unicode码
+# 4. callable(obj)该函数用于检查对象是否可以被调用，指的是对象是否可以使用圆括号来调用
+
+# 第8章 函数与函数式编程完结
